@@ -2,116 +2,118 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- SEO BASIS -->
-  <title>Frank Vermögensverwaltung | Immobilien & Beteiligungen</title>
+  <title>Frank Vermögensverwaltung</title>
 
   <meta name="description"
-        content="Frank Vermögensverwaltung verfolgt einen langfristig ausgerichteten, wertorientierten Ansatz mit Schwerpunkt auf Immobilien, Wohnkonzepte und unternehmerische Beteiligungen.">
-
+        content="Frank Vermögensverwaltung – private Vermögensverwaltung mit Fokus auf Immobilien und Unternehmensbeteiligungen in Düsseldorf, Hamburg und Schleswig-Holstein.">
   <meta name="robots" content="index, follow">
-  <meta name="author" content="Frank Vermögensverwaltung">
-  <meta name="language" content="de">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- OPEN GRAPH -->
-  <meta property="og:title" content="Frank Vermögensverwaltung">
-  <meta property="og:description"
-        content="Langfristig ausgerichtete Vermögensverwaltung mit Schwerpunkt Immobilien und Beteiligungen.">
-  <meta property="og:image"
-        content="https://raw.githubusercontent.com/skfrank81/Frank-Verm-gensverwaltung/main/F7582928-B5DE-48C4-9D01-089C401E4A50.png">
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="de_DE">
+  <meta property="og:title" content="Frank Vermögensverwaltung">
+  <meta property="og:description" content="Private Vermögensverwaltung mit Fokus auf Immobilien und Beteiligungen.">
+  <meta property="og:image"
+        content="https://github.com/skfrank81/Frank-Verm-gensverwaltung/raw/450a50f1d252bb1ea5c84e6be223f61c7ef283bd/7945E8D3-C44A-4966-8D41-94E22D4C0F43.png">
 
-  <!-- TWITTER / X -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Frank Vermögensverwaltung">
-  <meta name="twitter:description"
-        content="Langfristig ausgerichtete Vermögensverwaltung mit Schwerpunkt Immobilien und Beteiligungen.">
-  <meta name="twitter:image"
-        content="https://raw.githubusercontent.com/skfrank81/Frank-Verm-gensverwaltung/main/F7582928-B5DE-48C4-9D01-089C401E4A50.png">
-
-  <!-- FAVICON -->
+  <!-- Favicon -->
   <link rel="icon" type="image/png"
-        href="https://raw.githubusercontent.com/skfrank81/Frank-Verm-gensverwaltung/main/F7582928-B5DE-48C4-9D01-089C401E4A50.png">
-  <link rel="apple-touch-icon"
-        href="https://raw.githubusercontent.com/skfrank81/Frank-Verm-gensverwaltung/main/F7582928-B5DE-48C4-9D01-089C401E4A50.png">
+        href="https://github.com/skfrank81/Frank-Verm-gensverwaltung/raw/450a50f1d252bb1ea5c84e6be223f61c7ef283bd/7945E8D3-C44A-4966-8D41-94E22D4C0F43.png">
 
   <style>
+    :root {
+      --navy: #0f2433;
+      --white: #ffffff;
+      --text-dark: #1f1f1f;
+      --text-muted: #6b6b6b;
+    }
+
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
-      padding: 0;
-      background-color: #0f2433;
-      color: #e6e6e6;
-      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--white);
+      color: var(--text-dark);
     }
 
-    .page {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 50px 32px 120px;
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      height: 90vh;
+      min-height: 620px;
+      background: url("https://github.com/skfrank81/Frank-Verm-gensverwaltung/raw/1c07ba71b069ccfc1fac04da37212818fb3b4bac/IMG_0116.jpeg")
+                  center 65% / cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .notice {
-      color: red;
-      font-size: 26px;
-      font-weight: 500;
+    /* dezente Aufhellung */
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.75);
+    }
+
+    .hero-content {
+      position: relative;
       text-align: center;
-      margin-bottom: 40px;
+      max-width: 900px;
+      padding: 40px;
     }
 
-    .logo {
-      display: block;
-      margin: 0 auto 20px;
+    /* ===== LOGO ===== */
+    .hero-content img {
       max-width: 320px;
-      width: 100%;
+      margin-bottom: 28px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .main-title {
-      text-align: center;
-      font-size: 42px;
-      font-weight: 500;
-      letter-spacing: 0.8px;
-      color: #d4b36a;
-      margin-bottom: 60px;
+    .hero-content h1 {
+      font-size: 30px;
+      font-weight: normal;
+      margin: 0 0 30px 0;
+      color: var(--navy);
     }
 
-    pre.content {
-      white-space: pre-wrap;
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      font-size: 16px;
-      line-height: 1.9;
-      margin: 0;
+    /* ===== NAVIGATION ===== */
+    .hero-nav a {
+      color: var(--navy);
+      text-decoration: none;
+      margin: 0 18px;
+      font-size: 15px;
     }
 
-    .heading {
-      color: #d4b36a;
-      font-weight: 500;
+    .hero-nav a:hover {
+      text-decoration: underline;
     }
 
-    .mini-impressum {
-      margin-top: 80px;
-      text-align: right;
-      font-size: 11px;
-      color: #b5b5b5;
-      line-height: 1.5;
+    /* ===== SEO TEXT ===== */
+    .seo-placeholder {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 60px;
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--text-muted);
     }
 
-    @media (max-width: 600px) {
-      .page {
-        padding: 40px 20px 120px;
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .hero-content img {
+        max-width: 240px;
       }
 
-      .logo {
-        max-width: 260px;
+      .hero-content h1 {
+        font-size: 24px;
       }
 
-      .main-title {
-        font-size: 32px;
-      }
-
-      .mini-impressum {
-        text-align: left;
+      .seo-placeholder {
+        padding: 60px 32px;
       }
     }
   </style>
@@ -119,63 +121,38 @@
 
 <body>
 
-  <div class="page">
-
-    <div class="notice">
-      Diese Internetpräsenz befindet sich derzeit in der Überarbeitung!
-    </div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
 
     <img
-      src="https://raw.githubusercontent.com/skfrank81/Frank-Verm-gensverwaltung/main/F7582928-B5DE-48C4-9D01-089C401E4A50.png"
-      alt="Frank Vermögensverwaltung"
-      class="logo">
+      src="https://github.com/skfrank81/Frank-Verm-gensverwaltung/raw/450a50f1d252bb1ea5c84e6be223f61c7ef283bd/7945E8D3-C44A-4966-8D41-94E22D4C0F43.png"
+      alt="Frank Vermögensverwaltung Logo">
 
-    <div class="main-title">
-      Frank Vermögensverwaltung
-    </div>
+    <h1>Frank Vermögensverwaltung</h1>
 
-    <pre class="content">
-<span class="heading">Ausrichtung</span>
-Frank Vermögensverwaltung folgt einem langfristig ausgerichteten, wertorientierten Ansatz mit klarem Fokus auf Substanz, strukturelle Stabilität und nachhaltige Entwicklung. Ziel ist der verantwortungsvolle Aufbau, die kontinuierliche Weiterentwicklung sowie der dauerhafte Erhalt von Vermögenswerten innerhalb klar definierter und belastbarer Strukturen.
-
-Die Ausrichtung ist von Disziplin, Kontinuität und Zurückhaltung geprägt. Entscheidungen erfolgen selektiv und unter Berücksichtigung langfristiger wirtschaftlicher, struktureller und operativer Rahmenbedingungen. Kurzfristige Marktbewegungen, zyklische Effekte oder opportunistische Ansätze stehen nicht im Vordergrund. Maßgeblich ist die Fähigkeit eines Engagements, sich über unterschiedliche Marktphasen hinweg als tragfähig und belastbar zu erweisen.
-
-Zentrales Element der Ausrichtung ist die sorgfältige Einordnung sämtlicher Engagements in ein übergeordnetes Gesamtgefüge. Wirtschaftliche, organisatorische und strukturelle Aspekte werden nicht isoliert betrachtet, sondern stets im Kontext ihrer langfristigen Wirkung bewertet. Entscheidungen erfolgen nicht reaktiv, sondern auf Grundlage fundierter Analyse und langfristiger Perspektive.
-
-Wachstum wird nicht als Selbstzweck verstanden, sondern als Ergebnis nachhaltiger Entwicklung. Entsprechend liegt der Fokus nicht auf Geschwindigkeit oder kurzfristiger Skalierung, sondern auf Beständigkeit, Qualität und dauerhafter Wertschöpfung. Der Anspruch besteht darin, Strukturen zu schaffen und zu erhalten, die auch unter veränderten Rahmenbedingungen Bestand haben.
-
-⸻
-
-<span class="heading">Immobilien & Wohnkonzepte</span>
-Der Immobilienbereich bildet den zentralen Schwerpunkt der Aktivitäten und stellt den strukturellen Kern der Vermögensverwaltung dar. Im Fokus stehen der langfristige Aufbau, das Halten sowie die strukturierte Weiterentwicklung eigener Immobilienbestände. Ergänzend werden ausgewählte Wohnkonzepte verfolgt, die auf veränderte gesellschaftliche, wirtschaftliche und demografische Rahmenbedingungen reagieren.
-
-Die Betrachtung von Immobilien erfolgt ganzheitlich. Maßgeblich sind Standortqualität, Nutzungslogik, wirtschaftliche Tragfähigkeit sowie die langfristige Perspektive der Bewirtschaftung. Immobilien werden nicht isoliert bewertet, sondern im Zusammenspiel mit ihrem jeweiligen Umfeld, ihrer strukturellen Einbindung und ihrer nachhaltigen Nutzbarkeit betrachtet.
-
-Ein besonderer Schwerpunkt liegt im Segment der Microapartments. Dieses Marktumfeld wird als langfristig relevant angesehen und entsprechend differenziert entwickelt. Grundlage sind veränderte Lebens- und Arbeitsmodelle, zunehmende Mobilität, urbane Verdichtungsprozesse sowie eine steigende Nachfrage nach flexiblen, effizient nutzbaren Wohnformen, insbesondere in wirtschaftlich starken Regionen.
-
-Die Umsetzung erfolgt sowohl über eigenen Bestand als auch ergänzend über angemietete Wohnflächen. Durch diese Kombination entstehen klar strukturierte Wohnlösungen, die eine effiziente Flächennutzung mit funktionaler Klarheit verbinden. Besonderes Augenmerk liegt auf durchdachten Grundrissen, nachhaltigen Bewirtschaftungskonzepten und einer dauerhaft stabilen Nutzungsperspektive.
-
-Die Entwicklung und Bewirtschaftung der Immobilien erfolgt mit Blick auf operative Umsetzbarkeit, strukturelle Effizienz und langfristigen Werterhalt. Wohnkonzepte werden nicht als kurzfristige Marktreaktion verstanden, sondern als langfristig tragfähige Bestandteile eines stabilen Immobilienportfolios.
-
-⸻
-
-<span class="heading">Beteiligungen</span>
-Ergänzend zum Immobilienfokus erfolgen Beteiligungen an Unternehmen und Projekten mit unternehmerischer Substanz. Beteiligungen werden nicht als isolierte Kapitalanlagen verstanden, sondern als langfristig angelegte Engagements innerhalb klar strukturierter Rahmenbedingungen.
-
-Der inhaltliche Schwerpunkt liegt auf Unternehmen und Strukturen, deren Tätigkeitsfelder einen unmittelbaren oder mittelbaren Bezug zum Immobilienumfeld aufweisen. Hierzu zählen insbesondere Geschäftsmodelle entlang der immobilienbezogenen Wertschöpfungskette sowie angrenzende Bereiche, die strukturell, operativ oder strategisch mit dem Immobiliensektor verbunden sind.
-
-Maßgeblich sind eine nachvollziehbare strategische Ausrichtung, belastbare Geschäftsmodelle sowie eine strukturelle Klarheit, die eine nachhaltige Entwicklung ermöglicht. Kurzfristige Wachstumsversprechen oder opportunistische Engagements stehen nicht im Vordergrund. Entscheidend ist die Fähigkeit eines Unternehmens oder Projekts, sich langfristig zu etablieren und in ein konsistentes Gesamtgefüge einzufügen.
-
-Beteiligungen erfolgen selektiv und unterliegen einer individuellen Prüfung. Neben wirtschaftlichen Parametern werden organisatorische, strukturelle und strategische Aspekte berücksichtigt. Ziel ist es, Engagements einzugehen, die langfristig tragfähig sind und den übergeordneten Ansatz einer substanzorientierten Vermögensstruktur sinnvoll ergänzen.
-    </pre>
-
-    <div class="mini-impressum">
-      Frank Vermögensverwaltung<br>
-      Düsseldorf<br>
-      info@frankvmv.de
-    </div>
+    <nav class="hero-nav">
+      <a href="unternehmerischer-ansatz.html">Unternehmerischer Ansatz</a>
+      <a href="immobilien.html">Immobilien &amp; Wohnkonzepte</a>
+      <a href="beteiligungen.html">Beteiligungen</a>
+      <a href="impressum.html">Impressum</a>
+    </nav>
 
   </div>
+</section>
+
+<!-- SEO CONTENT -->
+<section class="seo-placeholder">
+  <p>
+    Wir handeln als private Vermögensverwaltung ausschließlich mit eigenem Kapital.
+    Unser Fokus liegt auf dem langfristigen Halten und Entwickeln von Immobilien sowie Unternehmensbeteiligungen.
+  </p>
+
+  <p>
+    Der Tätigkeitsschwerpunkt unserer privaten Vermögensverwaltung liegt in Düsseldorf, Hamburg und Schleswig-Holstein.
+    Unsere Entscheidungen sind unternehmerisch geprägt und auf Substanzerhalt sowie nachhaltige Wertentwicklung ausgerichtet.
+  </p>
+</section>
 
 </body>
 </html>
