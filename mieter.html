@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Mieterbereich | Frank Vermögensverwaltung</title>
+
+<!-- Favicons -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="mask-icon" href="favicon.svg" color="#000000">
+
+<!-- Web App Manifest -->
+<link rel="manifest" href="site.webmanifest">
+
+<!-- Open Graph (Social Media Preview) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Frank Vermögensverwaltung">
+<meta property="og:description" content="Private Vermögensverwaltung mit Fokus auf Immobilien und Beteiligungen.">
+<meta property="og:image" content="https://www.frankvmv.de/web-app-manifest-512x512.png">
+<meta property="og:url" content="https://www.frankvmv.de/">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.frankvmv.de/web-app-manifest-512x512.png">
+
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #1f1f1f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .login-box, .content-box {
+      max-width: 420px;
+      width: 100%;
+      padding: 40px;
+      border: 1px solid #e0e0e0;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 18px;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      font-size: 14px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 18px;
+      font-size: 14px;
+      background: #0f2433;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .error {
+      color: #a00000;
+      font-size: 13px;
+      margin-top: 10px;
+      display: none;
+    }
+
+    .content-box {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div class="login-box" id="loginBox">
+  <h1>Mieterzugang</h1>
+  <input type="password" id="password" placeholder="Passwort">
+  <button onclick="checkPassword()">Zugang öffnen</button>
+  <div class="error" id="error">Falsches Passwort</div>
+</div>
+
+<!-- GESCHÜTZTER INHALT -->
+<div class="content-box" id="contentBox">
+  <h1>Mieterbereich</h1>
+  <p>
+    Willkommen im internen Mieterbereich.<br><br>
+    Hier können später z. B.:
+    <br>– Dokumente
+    <br>– Hinweise
+    <br>– Ansprechpartner
+    <br>bereitgestellt werden.
+  </p>
+
+  <p>
+    <a href="index.html">Zurück zur Startseite</a>
+  </p>
+</div>
+
+<script>
+  const CORRECT_PASSWORD = "MIETER2026"; // <<< HIER PASSWORT ÄNDERN
+
+  function checkPassword() {
+    const input = document.getElementById("password").value;
+    if (input === CORRECT_PASSWORD) {
+      document.getElementById("loginBox").style.display = "none";
+      document.getElementById("contentBox").style.display = "block";
+    } else {
+      document.getElementById("error").style.display = "block";
+    }
+  }
+</script>
+
+</body>
+</html>
