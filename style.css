@@ -305,7 +305,11 @@ h1.eyebrow, h2.eyebrow { font-family: var(--font-body); font-size: var(--text-xs
 /* Unternehmenskarten: Vorschau und ganze Karte anklickbar */
 .company--link { position: relative; transition: border-color .3s var(--ease), box-shadow .3s var(--ease); }
 .company--link:hover { border-color: var(--color-primary); box-shadow: 0 10px 30px rgba(16, 24, 48, .08); }
-.company__link { margin-top: var(--space-6); align-self: flex-start; }
+.company--link { cursor: pointer; }
+.company__link { color: inherit; text-decoration: none; }
+.company__link svg { margin-left: .35em; vertical-align: .05em; color: var(--color-brass); transition: transform .3s var(--ease); }
+.company--link:hover .company__link { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .18em; }
+.company--link:hover .company__link svg { transform: translateX(4px); }
 .company__link::after { content: ""; position: absolute; inset: 0; }
 .company__link:focus-visible { outline: none; }
 .company--link:has(.company__link:focus-visible) { outline: 2px solid var(--color-primary); outline-offset: 3px; }
