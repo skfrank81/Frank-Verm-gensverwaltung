@@ -263,7 +263,7 @@ picture { display: block; }
 @media (max-width: 420px) { .brand span { font-size: 1.08rem; } .brand img { width: 28px; } .regions li { flex-wrap: wrap; gap: var(--space-1); } }
 
 /* Unternehmen */
-.companies { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(var(--space-5), 2.5vw, var(--space-8)); }
+.companies { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(var(--space-5), 2.5vw, var(--space-8)); }
 .company { background: var(--color-surface); border: 1px solid var(--color-divider); padding: clamp(var(--space-6), 3vw, var(--space-10)); display: flex; flex-direction: column; }
 .company__mark { width: 52px; height: 52px; border: 1px solid var(--color-primary); color: var(--color-primary); display: grid; place-items: center; font-family: var(--font-display); font-size: 1.25rem; letter-spacing: .02em; margin-bottom: var(--space-10); }
 .company__field { font-size: var(--text-xs); letter-spacing: .16em; text-transform: uppercase; color: var(--color-brass); margin-bottom: var(--space-3); }
@@ -301,3 +301,16 @@ h1.eyebrow, h2.eyebrow { font-family: var(--font-body); font-size: var(--text-xs
 .block p a { color: var(--color-primary); text-underline-offset: 3px; }
 .facts--2 { grid-template-columns: repeat(2, 1fr); }
 @media (max-width: 700px) { .facts--2 { grid-template-columns: 1fr; } }
+
+/* Unternehmenskarten: Vorschau und ganze Karte anklickbar */
+.company--link { position: relative; transition: border-color .3s var(--ease), box-shadow .3s var(--ease); }
+.company--link:hover { border-color: var(--color-primary); box-shadow: 0 10px 30px rgba(16, 24, 48, .08); }
+.company__link { margin-top: var(--space-6); align-self: flex-start; }
+.company__link::after { content: ""; position: absolute; inset: 0; }
+.company__link:focus-visible { outline: none; }
+.company--link:has(.company__link:focus-visible) { outline: 2px solid var(--color-primary); outline-offset: 3px; }
+.company__preview { border: 1px solid var(--color-divider); background: var(--color-bg); margin-bottom: var(--space-6); overflow: hidden; }
+.company__bar { display: flex; align-items: center; gap: 5px; padding: 8px 10px; border-bottom: 1px solid var(--color-divider); background: var(--color-surface-offset); }
+.company__bar i { width: 7px; height: 7px; border-radius: 50%; background: var(--color-divider); display: block; }
+.company__bar b { margin-left: 8px; font-weight: 500; font-size: var(--text-xs); color: var(--color-text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.company__shot { display: block; aspect-ratio: 16 / 10; background-color: var(--color-surface-offset); background-size: cover; background-position: top center; }
